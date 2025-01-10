@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLODWHITE OFFICIAL</title>
+    <style>
+        /* Genel stil */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            background: url('YOUR_BACKGROUND_IMAGE.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Sayfa Başlangıcı için animasyon */
+        .loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.7);
+            top: 0;
+            left: 0;
+        }
+
+        .loader span {
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            animation: spin 3s infinite;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Sayfa içeriği */
+        .header {
+            text-align: center;
+            color: white;
+            font-size: 50px;
+            margin-top: 50px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            margin: 0 15px;
+            border: 2px solid white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: transparent;
+            transition: background-color 0.3s;
+        }
+
+        .links a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .video-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .video-container a {
+            display: inline-block;
+            width: 300px;
+            height: 170px;
+            background: url('https://img.youtube.com/vi/Z6Fjc1jNRH8/hqdefault.jpg') no-repeat center center;
+            background-size: cover;
+            text-decoration: none;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        .video-container a:after {
+            content: 'Watch Video';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .channel {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .channel a {
+            display: inline-block;
+            font-size: 20px;
+            color: #ffffff;
+            background-color: #ff0000;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .channel a:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sayfa Başlangıcı Animasyonu -->
+    <div class="loader">
+        <span>BLODWHITE OFFICIAL</span>
+    </div>
+
+    <!-- Sayfa içeriği -->
+    <div class="header">
+        <h1>BLODWHITE OFFICIAL</h1>
+    </div>
+
+    <!-- Linkler -->
+    <div class="links">
+        <a href="https://www.youtube.com/watch?v=Z6Fjc1jNRH8" target="_blank">Video</a>
+        <a href="https://www.youtube.com/@BLODWHITE-1" target="_blank">Yeni Kanal</a>
+    </div>
+
+    <!-- Video Görseli -->
+    <div class="video-container">
+        <a href="https://www.youtube.com/watch?v=Z6Fjc1jNRH8" target="_blank"></a>
+    </div>
+
+    <!-- Kanal Linki -->
+    <div class="channel">
+        <a href="https://www.youtube.com/@BLODWHITE-1" target="_blank">Yeni Kanal</a>
+    </div>
+
+    <!-- Sayfa yüklenmesi sonrası loader animasyonunu kaldırma -->
+    <script>
+        window.onload = function () {
+            setTimeout(function () {
+                document.querySelector('.loader').style.display = 'none';
+            }, 3000); // 3 saniye sonra animasyonu kaldır
+        }
+    </script>
+
+</body>
+</html>
